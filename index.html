@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+       emailjs.init({
+         publicKey: "Rur3rl6bKwvZpogHJ",
+       });
+    })();
+ </script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="right2">
+        <div class="user-name">UserName</div>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">
+            <div class="menu" onclick="myFunction(this);toggelmenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
+        <div class="dropdown-menu">
+            <ul >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div> 
+    </nav>
+   
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Book a Service Today!</h1>
+            <p>Experience the best laundry services with us. We ensure quality and satisfaction. From premium dry
+                cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the
+                freshness of your cloth today!</p>
+            <button class="button1" id="button1">Book a Service Today</button>
+        </div>
+
+        <div class="hero-right">
+            <img src="hand-drawn-laundry-service-illustration_23-2151239914.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Service Overview Section -->
+    <section class="service-overview">
+        <div class="overview-item">Our Achievements</div>
+        <div class="overview-item">15+ Laundry Services</div>
+        <div class="overview-item">240+ Happy Customers</div>
+        <div class="overview-item">2+ Years of Experience</div>
+    </section>
+
+    <div class="container">
+        <!-- Our Services Section  -->
+        <div class="service-section" id="service-section">
+            <h2>Our Seervices</h2>
+            <p>Click on the Add To Cart button to add the services to your cart </p>
+            <div class="main">
+            <div class="service-item">
+                <span>Wash & Fold - ₹100.00</span>
+                <button class="add-item" data-service="Wash & Fold" data-index="1" data-price="100">Add Item</button>
+                
+            </div>
+            <div class="service-item">
+                <span>Car-Cleaning - ₹400.00 </span>
+                <button class="add-item" data-service="Car-Cleaning" data-index="3" data-price="400">Add Item</button>
+            </div>
+    
+            <div class="service-item">
+                <span>Bike-wash - ₹400.00</span>
+                <button class="add-item" data-service="Bike wash" data-index="3" data-price="400">Add Item</button>
+            </div>
+    
+            <div class="service-item">
+                <span>House-Cleaning - ₹500.00</span>
+                <button class="add-item" data-service="House Cleaning" data-index="4" data-price="500">Add Item</button>
+            </div>
+    
+            <div class="service-item">
+                <span>Dry-Cleaning - ₹200.00</span>
+                <button class="add-item" data-service="Dry-Cleaning" data-index="5" data-price="200">Add Item</button>
+            </div>
+            <div class="service-item">
+                <span>Ironing - ₹150.00</span>
+                <button class="add-item" data-service="Ironing" data-index="6" data-price="150">Add Item</button>
+            </div>
+            <p><img src="img1.png" alt="img">Add items to the cart and book now</p>
+            </div>
+        </div>
+    
+        <div class="item">
+    
+        <div class="added-items-section">
+            <div>
+                <h2>Added Items</h2>
+                <table id="cart-items">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+    
+                    </tbody>
+                </table>
+                <div class="no-item-added">
+                    <img src="img1.png" alt="img">
+                    <h3>No Item Added</h3>
+                    <p>Add items to the Services bar</p>
+                </div>
+                <div class="total-amount">
+                   <span id="total-amount">Total : 0</span>
+                </div>
+            </div>
+        </div>
+        <!-- Book Now Form -->
+        <div class="book-now">
+            <h2>Book Now</h2>
+            <form id="contact-form">
+                <label>Full Name</label>
+                <input type="text" name="Name" id="name" placeholder="Enter your name" required>
+                <div class="book-form">
+                    <div>
+                        <label>Email ID</label>
+                        <input type="email" name="Email" id="email" placeholder="mail@example.com" required>
+                    </div>
+                        <div>
+                            <label>Phone Number</label>
+                            <input type="text" name="Number" id="number" placeholder="+9100000000" required>
+                        </div>
+                </div>
+                <label >Message</label>
+                <input type="message" name="Message" id="message" class="message" placeholder="Please Enter Your Message">
+                <button type="submit" id="submit-btn">Book Now</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="premium.png" alt="premium">
+            <h3>Premium Service</h3>
+        </div>
+        <div class="feature">
+            <img src="service.png" alt="service">
+            <h3>Quick Support</h3>
+        </div>
+        <div class="feature">
+            <img src="shipping.png" alt="shipping">
+            <h3>Hassle Free Delivery</h3>
+        </div>
+        <div class="feature">
+            <img src="image.png" alt="image">
+            <h3>Affordable Prices</h3>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <div class="left">
+        <h2>Subscribe to our newsletter.</h2>
+    </div>
+         <div class="right">
+            <div class="right1">
+        <input type="text" placeholder="Full-name">
+        <input type="email" placeholder="Email">
+            </div>
+        <button>Subscribe</button>
+    </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h2>Logo</h2>
+            <p><span style="font-weight: bold; font-size: 20px;">About US</span></p>
+            <p>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit</p>
+        </div>
+        <div class="footer-section">
+            <h2>Impotant Links</h2>
+            <ul>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Privacy Policy</li>
+                <li>Terms</li>
+                <li>Sitemap</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Contact</h2>
+            <ul>
+                <li>example@site.com</li>
+                <li>+918123232712</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><img src="insta.webp" alt="insta"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook"></a>
+                <a href="https://x.com/i/flow/login" target="_blank"><img src="twitter.png" alt="twitter"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+ 
+
+</body>
+
+</html>
